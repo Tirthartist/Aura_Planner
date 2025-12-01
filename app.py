@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, Flask is live on Render!"
+    return render_template("index.html")
 
 # Keep your existing routes if needed
 @app.route('/planners')

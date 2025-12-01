@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Planners{% endblock %}
+{% block body_class %}page-planners{% endblock %}
+{% block content %}
+<section class="container section reveal">
+  <h1 class="section-title">All Event Planners</h1>
+  <div id="filters" class="filter-bar">
+    <button class="filter-btn" data-category="Birthday Party">Birthday Party</button>
+    <button class="filter-btn" data-category="New Year Party">New Year Party</button>
+    <button class="filter-btn" data-category="Ring Ceremony">Ring Ceremony</button>
+    <button class="filter-btn" data-category="Marriage">Marriage</button>
+    <button class="filter-btn" data-category="Anniversary">Anniversary</button>
+    <button class="filter-btn" data-category="Baby Shower">Baby Shower</button>
+    <button class="filter-btn" data-category="Corporate Events">Corporate Events</button>
+  </div>
+  <div id="planners-grid" class="planner-grid"></div>
+</section>
+{% endblock %}

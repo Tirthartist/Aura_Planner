@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Planner Details{% endblock %}
+{% block body_class %}page-detail{% endblock %}
+{% block content %}
+<section id="planner-detail" class="planner-detail container section reveal" data-slug="{{ slug }}">
+  <div class="detail-hero glass">
+    <img id="detail-hero-img" alt="Planner hero"/>
+    <div class="detail-overlay">
+      <h1 id="detail-name"></h1>
+      <p id="detail-company" class="muted"></p>
+      <div class="rating" id="detail-rating"></div>
+      <div class="price" id="detail-price"></div>
+      <div id="detail-specialties" class="chips"></div>
+      <div class="detail-actions">
+        <a id="detail-whatsapp" class="btn btn-primary btn-glow" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a id="detail-call" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-phone"></i> Call</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="detail-section">
+      <h2>About</h2>
+      <p id="detail-about"></p>
+    </div>
+    <div class="detail-section">
+      <h2>Services</h2>
+      <ul id="detail-services" class="checklist"></ul>
+    </div>
+    <div class="detail-section full">
+      <h2>Gallery</h2>
+      <div id="detail-gallery" class="gallery-grid"></div>
+    </div>
+    <div class="detail-section">
+      <h2>Contact</h2>
+      <ul id="detail-contacts" class="contact-list"></ul>
+      <div class="socials" id="detail-socials"></div>
+    </div>
+    <div class="detail-section">
+      <h2>Enquire Now</h2>
+      <form class="fs-form" id="planner-detail-form" method="POST">
+        <input type="hidden" name="_subject" value="Aura Planner Inquiry"/>
+        <div class="form-grid">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <select name="event_type" required>
+            <option value="" disabled selected>Select event type</option>
+            <option>Birthday Party</option>
+            <option>New Year Party</option>
+            <option>Ring Ceremony</option>
+            <option>Marriage</option>
+            <option>Anniversary</option>
+            <option>Baby Shower</option>
+            <option>Corporate Events</option>
+            <option>Others</option>
+          </select>
+          <input type="hidden" name="planner_slug" id="planner_slug" value="{{ slug }}">
+          <textarea name="message" rows="4" placeholder="Tell us about your event"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-glow">Send</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

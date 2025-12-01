@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Planner · {% block title %}{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">
+        <span class="logo-text">Aura Planner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link btn btn-glow">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo small"><span class="logo-text">Aura Planner</span></div>
+        <p>Find your perfect event planner. Premium, trusted, and effortless.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="auraplanner@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+919999999999" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="link-list">
+          <li><a href="/planners?category=Marriage">Weddings</a></li>
+          <li><a href="/planners?category=Birthday%20Party">Birthdays</a></li>
+          <li><a href="/planners?category=Corporate%20Events">Corporate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="link-list">
+          <li><a href="/contact">Contact Form</a></li>
+          <li><a href="auraplanner@gmail.com">auraplanner@gmail.com</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Aura Planner. All rights reserved.</p>
+    </div>
+  </footer>
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <img class="lightbox-img" alt="Gallery image"/>
+    <button class="lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

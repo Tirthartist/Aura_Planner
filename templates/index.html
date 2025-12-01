@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body_class %}page-home{% endblock %}
+{% block content %}
+<section class="hero container reveal">
+  <div class="hero-content">
+    <h1>Find Your Perfect Event Planner</h1>
+    <p>Trusted professionals across your city and country. Elegant weddings, unforgettable birthdays, and seamless corporate events.</p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-art"><img src="images/hero-art.jpeg" alt=""></div>
+</section>
+<section class="container section reveal">
+  <h2 class="section-title">Browse by Category</h2>
+  <div class="category-grid">
+    <a href="/planners?category=Birthday%20Party" class="category-card"><i class="fa-solid fa-cake-candles"></i><span>Birthday Party</span></a>
+    <a href="/planners?category=New%20Year%20Party" class="category-card"><i class="fa-solid fa-champagne-glasses"></i><span>New Year Party</span></a>
+    <a href="/planners?category=Ring%20Ceremony" class="category-card"><i class="fa-solid fa-ring"></i><span>Ring Ceremony</span></a>
+    <a href="/planners?category=Marriage" class="category-card"><i class="fa-solid fa-heart"></i><span>Marriage</span></a>
+    <a href="/planners?category=Anniversary" class="category-card"><i class="fa-solid fa-gem"></i><span>Anniversary</span></a>
+    <a href="/planners?category=Baby%20Shower" class="category-card"><i class="fa-solid fa-baby"></i><span>Baby Shower</span></a>
+    <a href="/planners?category=Corporate%20Events" class="category-card"><i class="fa-solid fa-briefcase"></i><span>Corporate Events</span></a>
+  </div>
+</section>
+<section class="container section reveal">
+  <h2 class="section-title">Featured Planners</h2>
+  <div id="featured-grid" class="planner-grid"></div>
+</section>
+<section class="container section alt reveal">
+  <div class="how-grid">
+    <div class="how-card glass">
+      <i class="fa-solid fa-filter"></i>
+      <h3>Filter</h3>
+      <p>Pick a category that matches your event type.</p>
+    </div>
+    <div class="how-card glass">
+      <i class="fa-solid fa-eye"></i>
+      <h3>Preview</h3>
+      <p>View galleries, services, and pricing at a glance.</p>
+    </div>
+    <div class="how-card glass">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Connect</h3>
+      <p>Reach out directly via WhatsApp, email, or form.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

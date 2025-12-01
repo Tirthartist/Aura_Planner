@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{% block body_class %}page-contact{% endblock %}
+{% block content %}
+<section class="container section narrow reveal">
+  <h1 class="section-title">Contact Us</h1>
+  <form class="fs-form" id="site-contact-form" method="POST">
+    <input type="hidden" name="_subject" value="Aura Planner – Website Contact"/>
+    <div class="form-grid">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <select name="event_type" required>
+        <option value="" disabled selected>Select event type</option>
+        <option>Birthday Party</option>
+        <option>New Year Party</option>
+        <option>Ring Ceremony</option>
+        <option>Marriage</option>
+        <option>Anniversary</option>
+        <option>Baby Shower</option>
+        <option>Corporate Events</option>
+        <option>Others</option>
+      </select>
+      <textarea name="message" rows="5" placeholder="How can we help?" class="full"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-glow">Send Message</button>
+    <p class="form-status" aria-live="polite"></p>
+  </form>
+</section>
+{% endblock %}

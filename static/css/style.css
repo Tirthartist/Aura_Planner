@@ -79,38 +79,9 @@ img {
 }
 
 /* Header */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: transparent;
-  transition: all 0.3s ease;
-  padding: 15px 0;
-  position: center;
-}
+.site-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(12px); background:linear-gradient(180deg, rgba(20,16,38,.7), rgba(20,16,38,.35)); border-bottom:1px solid var(--border)}
+.nav-wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
 
-/* Add this for scrolled state */
-.site-header.scrolled {
-  background: rgba(20, 16, 38, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-}
-.nav-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 24px;
-  background: rgba(15, 10, 31, 0.85);
-  border-radius: 20px;
-  margin: 12px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-}
 .logo .logo-text {
   font-family: "Playfair Display", serif;
   font-weight: 700;

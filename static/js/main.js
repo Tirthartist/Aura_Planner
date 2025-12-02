@@ -21,7 +21,7 @@
       cover: 'images/unnati1.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Alpa - New Year Party Planner
@@ -40,7 +40,7 @@
       cover: 'images/alpa1.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Vidhi - New Year Party Planner
@@ -59,7 +59,7 @@
       cover: 'images/vidhi.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Nishita - Ring Ceremony Planner
@@ -78,7 +78,7 @@
       cover: 'images/nishita1.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Riya - Marriage Planner
@@ -97,7 +97,7 @@
       cover: 'images/riya1.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Dhruhini - Marriage Planner
@@ -116,7 +116,7 @@
       cover: 'images/dhruhini.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Karan - Anniversary Planner
@@ -135,7 +135,7 @@
       cover: 'images/karan.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Fenil - Baby Shower Planner
@@ -154,7 +154,7 @@
       cover: 'images/fenil1.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
     // Jeel - Corporate Event Planner
@@ -173,7 +173,7 @@
       cover: 'images/jeel.jpeg',
       featured: true,
       socials: {
-        instagram: 'https://www.instagram.com/accounts/login/?next=%2Fauraplanner07%2F&source=omni_redirect'
+        instagram: 'https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano='
       }
     },
   ];

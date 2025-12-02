@@ -327,11 +327,9 @@
     socials.innerHTML = `
       ${p.socials?.instagram ? `<a href="${p.socials.instagram}" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>`: ''}
       ${p.socials?.facebook ? `<a href="${p.socials.facebook}" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>`: ''}
-      ${p.email ? `<a href="mailto:${p.email}" title="Email"><i class="fa-solid fa-envelope"></i></a>`: ''}
-      ${p.phone ? `<a href="tel:${p.phone}" title="Call"><i class="fa-solid fa-phone"></i></a>`: ''}
+      ${p.email ? `<a href="mailto:${p.email}?subject=Inquiry" onclick="console.log('Email link clicked')" title="Email"><i class="fa-solid fa-envelope"></i></a>`: ''}
       ${p.phone ? `<a href="${whatsappLink(p.phone)}" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`: ''}
     `;
-
     const w = $('#detail-whatsapp');
     if (w) w.href = whatsappLink(p.phone, `Hi ${p.name.split(' ')[0]}, I'm interested in your services via Aura Planner.`);
     const c = $('#detail-call');
@@ -348,7 +346,16 @@
     const p = bySlug(slug);
     if (p) fillDetail(p);
   }
-
+function sendEmail(email, subject = 'Inquiry', body = '') {
+  try {
+    const mailtoLink = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`;
+    window.location.href = mailtoLink;
+    return true;
+  } catch (e) {
+    console.error('Failed to open email client:', e);
+    return false;
+  }
+}
   // Featured on home
   function initHome(){
     const cont = $('#featured-grid');

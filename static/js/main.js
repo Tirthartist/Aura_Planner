@@ -14,7 +14,7 @@
       specialties: ['Birthday Parties', 'Themed Decor', 'Kids & Adults', 'Budget Friendly'],
       categories: ['Birthday Party'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Specializing in creating magical birthday celebrations for all ages with creative themes and perfect execution.',
       services: ['Theme Decoration','Cake & Catering','Entertainment','Photography'],
       gallery: ['images/bday1.jpeg','images/bday2.jpeg','images/bday3.jpeg'],
@@ -33,7 +33,7 @@
       specialties: ['New Year Parties', 'Countdown Events', 'DJ & Entertainment'],
       categories: ['New Year Party'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Creating unforgettable New Year celebrations with amazing themes, music, and entertainment.',
       services: ['Venue Decoration','DJ & Sound','Catering','Photography'],
       gallery: ['images/ny1.jpeg','images/ny2.jpeg','images/ny3.jpeg'],
@@ -52,7 +52,7 @@
       specialties: ['New Year Galas', 'Corporate NYE', 'Themed Parties'],
       categories: ['New Year Party'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Specializing in high-energy New Year celebrations with unique themes and entertainment.',
       services: ['Full Event Planning','Themed Decor','Live Entertainment','Catering'],
       gallery: ['images/ny4.jpeg','images/ny5.jpeg','images/ny6.jpeg'],
@@ -71,7 +71,7 @@
       specialties: ['Ring Ceremonies', 'Engagement Events', 'Intimate Gatherings'],
       categories: ['Ring Ceremony'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Creating beautiful and intimate ring ceremonies that tell your unique love story.',
       services: ['Venue Decoration','Photography','Catering','Entertainment'],
       gallery: ['images/ring1.jpeg','images/ring2.jpeg','images/ring3.jpeg'],
@@ -90,7 +90,7 @@
       specialties: ['Luxury Weddings', 'Destination Weddings', 'Full Planning'],
       categories: ['Marriage'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Transforming wedding dreams into reality with exquisite planning and flawless execution.',
       services: ['Full Wedding Planning','Venue Selection','Vendor Management','Day-of Coordination'],
       gallery: ['images/wed1.jpeg','images/wed2.jpeg','images/wed3.jpeg'],
@@ -109,7 +109,7 @@
       specialties: ['Traditional Weddings', 'Cultural Celebrations', 'Budget Planning'],
       categories: ['Marriage'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Specializing in traditional and cultural weddings that honor your heritage.',
       services: ['Wedding Planning','Cultural Coordination','Budget Management','Vendor Selection'],
       gallery: ['images/wed4.jpeg','images/wed5.jpeg','images/wed6.jpeg'],
@@ -128,7 +128,7 @@
       specialties: ['Anniversary Celebrations', 'Vow Renewals', 'Milestone Events'],
       categories: ['Anniversary'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Creating heartfelt anniversary celebrations that honor your journey together.',
       services: ['Event Design','Venue Selection','Catering','Entertainment'],
       gallery: ['images/ann1.jpeg','images/ann2.jpeg','images/ann3.jpeg'],
@@ -147,7 +147,7 @@
       specialties: ['Baby Showers', 'Gender Reveals', 'Naming Ceremonies'],
       categories: ['Baby Shower'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Designing adorable and memorable baby showers to welcome your little one.',
       services: ['Theme Design','Decor & Setup','Games & Activities','Catering'],
       gallery: ['images/baby1.jpeg','images/baby2.jpeg','images/baby3.jpeg'],
@@ -166,7 +166,7 @@
       specialties: ['Corporate Events', 'Conferences', 'Product Launches'],
       categories: ['Corporate Events'],
       phone: '+91 xxxxx xxxxx',
-      email: 'mailto:auraplanner07@gmail.com',
+      email: 'auraplanner07@gmail.com',
       about: 'Professional corporate event planning that delivers results and creates impact.',
       services: ['Event Management','AV Production','Branding','Guest Management'],
       gallery: ['images/ce1.jpeg','images/ce2.jpeg','images/ce3.jpeg'],
@@ -218,7 +218,7 @@
             <div class="socials">
               ${p.socials?.instagram ? `<a href="${p.socials.instagram}" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>`: ''}
               ${p.socials?.facebook ? `<a href="${p.socials.facebook}" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>`: ''}
-              ${p.email ? `<a href="mailto:${p.email}" title="Email"><i class="fa-solid fa-envelope"></i></a>`: ''}
+              ${p.email ? `<a href="https://mail.google.com/mail/?view=cm&fs=1&to=${p.email}" target="_blank"><i class="fa-solid fa-envelope"></i></a>`: ''}
               ${p.phone ? `<a href="tel:${p.phone}" title="Call"><i class="fa-solid fa-phone"></i></a>`: ''}
               ${p.phone ? `<a href="${whatsappLink(p.phone)}" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`: ''}
             </div>
@@ -350,7 +350,7 @@ function fillDetail(p){
       const email = p.email.replace('mailto:', '');
       const message = 'Hi, I have an inquiry for event planning.';
       const mailtoLink = `mailto:${email}?body=${encodeURIComponent(message)}`;
-      cl.push(`<li><i class="fa-solid fa-envelope"></i> <a href="${mailtoLink}" id="email-link">${email}</a></li>`);
+      cl.push(`<li><i class="fa-solid fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=auraplanner07@gmail.com" target="_blank">${email}</a></li>`);
       
       // Add click handler after the element exists
       setTimeout(() => {
@@ -371,7 +371,7 @@ function fillDetail(p){
     socials.innerHTML = `
       ${p.socials?.instagram ? `<a href="${p.socials.instagram}" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>`: ''}
       ${p.socials?.facebook ? `<a href="${p.socials.facebook}" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>`: ''}
-      ${p.email ? `<a href="mailto:${p.email.replace('mailto:', '')}?body=${encodeURIComponent('Hi, I have an inquiry for event planning.')}" class="email-link" title="Email"><i class="fa-solid fa-envelope"></i></a>`: ''}
+      ${p.email ? `<a href="https://mail.google.com/mail/?view=cm&fs=1&to=auraplanner07@gmail.com" target="_blank" class="email-link" title="Email"><i class="fa-solid fa-envelope"></i></a>`: ''}
       ${p.phone ? `<a href="${whatsappLink(p.phone)}" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`: ''}
     `;
     const w = $('#detail-whatsapp');

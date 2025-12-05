@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Planner · Planner Details</title>
+  <link rel="shortcut icon" type="image/png" href="static/images/aura_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="page-detail">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Aura Planner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link btn btn-glow">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="planner-detail" class="planner-detail container section reveal" data-slug="">
+      <div class="detail-hero glass">
+        <img id="detail-hero-img" alt="Planner hero"/>
+        <div class="detail-overlay">
+          <h1 id="detail-name"></h1>
+          <p id="detail-company" class="muted"></p>
+          <div class="rating" id="detail-rating"></div>
+          <div class="price" id="detail-price"></div>
+          <div id="detail-specialties" class="chips"></div>
+          <div class="detail-actions">
+            <a id="detail-whatsapp" class="btn btn-primary btn-glow" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a id="detail-call" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-phone"></i> Call</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-section">
+          <h2>About</h2>
+          <p id="detail-about"></p>
+        </div>
+        <div class="detail-section">
+          <h2>Services</h2>
+          <ul id="detail-services" class="checklist"></ul>
+        </div>
+        <div class="detail-section full">
+          <h2>Gallery</h2>
+          <div id="detail-gallery" class="gallery-grid"></div>
+        </div>
+        <div class="detail-section">
+          <h2>Contact</h2>
+          <ul id="detail-contacts" class="contact-list"></ul>
+          <div class="socials" id="detail-socials"></div>
+        </div>
+        <div class="detail-section">
+          <h2>Enquire Now</h2>
+          <form class="fs-form" id="planner-detail-form" method="POST">
+            <input type="hidden" name="_subject" value="Aura Planner Inquiry"/>
+            <div class="form-grid">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="tel" name="phone" placeholder="Phone" required>
+              <input type="email" name="email" placeholder="email" required>
+              <select name="event_type" required>
+                <option value="" disabled selected>Select event type</option>
+                <option>Birthday Party</option>
+                <option>New Year Party</option>
+                <option>Ring Ceremony</option>
+                <option>Marriage</option>
+                <option>Anniversary</option>
+                <option>Baby Shower</option>
+                <option>Corporate Events</option>
+                <option>Others</option>
+              </select>
+              <select name="budget" id="budget_planner">
+                <option value="" disabled selected>Preferred budget</option>
+                <option value="₹10,000 - ₹25,000">₹10,000 - ₹25,000</option>
+                <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                <option value="₹1,00,000 - ₹2,00,000">₹1,00,000 - ₹2,00,000</option>
+                <option value="₹2,00,000 - ₹4,00,000">₹2,00,000 - ₹4,00,000</option>
+                <option value="Above ₹4,00,000">Above ₹4,00,000</option>
+              </select>
+              <input type="hidden" name="planner_slug" id="planner_slug" value="">
+              <textarea name="message" rows="4" placeholder="Tell us about your event"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-glow">Send</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo small"><span class="logo-text">Aura Planner</span></div>
+        <p>Find your perfect event planner. Premium, trusted, and effortless.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" onclick="window.open('mailto:auraplanner07@gmail.com?body=Hi%2C%20I%20have%20an%20inquiry%20for%20event%20planning.', '_blank'); return false;" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>          
+          <a href="tel:+91 xxxxx xxxxx" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="link-list">
+          <li><a href="planners.html?category=Marriage">Weddings</a></li>
+          <li><a href="planners.html?category=Birthday%20Party">Birthdays</a></li>
+          <li><a href="planners.html?category=Corporate%20Events">Corporate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="link-list">
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=auraplanner07@gmail.com" target="_blank">auraplanner07@gmail.com</a></li>
+          <li><a href="tel:+91 xxxxx xxxxx">+91 xxxxx xxxxx</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Aura Planner. All rights reserved.</p>
+    </div>
+  </footer>
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <img class="lightbox-img" alt="Gallery image"/>
+    <button class="lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <script src="static/js/main.js" defer></script>
+</body>
+</html>

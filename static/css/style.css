@@ -355,7 +355,7 @@ img {
   flex-wrap: wrap;
 }
 .hero-art {
-  background: url("/static/images/hero-art.jpeg") center/cover no-repeat;
+  background: url("../images/hero-art.jpeg") center/cover no-repeat;
   border-radius: 16px;
   height: 400px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);

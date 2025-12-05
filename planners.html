@@ -3,32 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aura Planner · {% block title %}{% endblock %}</title>
-  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/aura_icon.png') }}">
+  <title>Aura Planner · Planners</title>
+  <link rel="shortcut icon" type="image/png" href="static/images/aura_icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  {% block extra_head %}{% endblock %}
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body class="page-planners">
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="/" class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-text">Aura Planner</span>
       </a>
       <button class="nav-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
       <nav class="main-nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link btn btn-glow">Contact</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link btn btn-glow">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    {% block content %}{% endblock %}
+    <section class="container section reveal">
+      <h1 class="section-title">All Event Planners</h1>
+      <div id="filters" class="filter-bar">
+        <button class="filter-btn" data-category="Birthday Party">Birthday Party</button>
+        <button class="filter-btn" data-category="New Year Party">New Year Party</button>
+        <button class="filter-btn" data-category="Ring Ceremony">Ring Ceremony</button>
+        <button class="filter-btn" data-category="Marriage">Marriage</button>
+        <button class="filter-btn" data-category="Anniversary">Anniversary</button>
+        <button class="filter-btn" data-category="Baby Shower">Baby Shower</button>
+        <button class="filter-btn" data-category="Corporate Events">Corporate Events</button>
+      </div>
+      <div id="planners-grid" class="planner-grid"></div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -45,15 +56,15 @@
       <div>
         <h4>Explore</h4>
         <ul class="link-list">
-          <li><a href="/planners?category=Marriage">Weddings</a></li>
-          <li><a href="/planners?category=Birthday%20Party">Birthdays</a></li>
-          <li><a href="/planners?category=Corporate%20Events">Corporate</a></li>
+          <li><a href="planners.html?category=Marriage">Weddings</a></li>
+          <li><a href="planners.html?category=Birthday%20Party">Birthdays</a></li>
+          <li><a href="planners.html?category=Corporate%20Events">Corporate</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul class="link-list">
-          <li><a href="/contact">Contact Form</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
           <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=auraplanner07@gmail.com" target="_blank">auraplanner07@gmail.com</a></li>
           <li><a href="tel:+91 xxxxx xxxxx">+91 xxxxx xxxxx</a></li>
         </ul>
@@ -69,34 +80,7 @@
     <img class="lightbox-img" alt="Gallery image"/>
     <button class="lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
   </div>
-  <!-- Enquiry Modal -->
-  <div id="enquiryModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h2>Enquire Now</h2>
-      <form id="enquiryForm">
-        <div class="form-group">
-          <label for="budget">Select Your Budget Range:</label>
-          <select id="budget" name="budget" required>
-            <option value="" disabled selected>Select Budget Range</option>
-            <option value="Under ₹50,000">Under ₹50,000</option>
-            <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
-            <option value="₹1,00,000 - ₹5,00,000">₹1,00,000 - ₹5,00,000</option>
-            <option value="₹5,00,000 - ₹10,00,000">₹5,00,000 - ₹10,00,000</option>
-            <option value="Above ₹10,00,000">Above ₹10,00,000</option>
-            <option value="Custom Budget">Custom Budget (Specify in Message)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Additional Details (Optional):</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us more about your event..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
-      </form>
-    </div>
-  </div>
 
-  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-  {% block extra_scripts %}{% endblock %}
+  <script src="static/js/main.js" defer></script>
 </body>
 </html>

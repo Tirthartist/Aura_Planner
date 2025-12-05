@@ -1,8 +1,8 @@
-/* Aura Planner - JS (data + UI) */
+/* Aura Planner - Static JS (data + UI) */
 (function(){
   const $ = (s, c=document) => c.querySelector(s);
   const $$ = (s, c=document) => Array.from(c.querySelectorAll(s));
-  const STATIC_BASE = '/static/';
+  const STATIC_BASE = 'static/';
 
   const AURA_PLANNERS = [
     // Unnati - Birthday Planner
@@ -201,7 +201,7 @@
     const chips = p.specialties.map(chip).join('');
     return `
       <article class="planner-card" data-slug="${p.slug}">
-        <a class="cover" href="/planner/${p.slug}">
+        <a class="cover" href="planner-detail.html?slug=${p.slug}">
           <img src="${STATIC_BASE}${p.cover}" alt="${p.name} cover">
          
         </a>
@@ -222,7 +222,7 @@
               ${p.phone ? `<a href="tel:${p.phone}" title="Call"><i class="fa-solid fa-phone"></i></a>`: ''}
               ${p.phone ? `<a href="${whatsappLink(p.phone)}" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>`: ''}
             </div>
-            <a class="btn btn-primary btn-glow" href="/planner/${p.slug}">View Details</a>
+            <a class="btn btn-primary btn-glow" href="planner-detail.html?slug=${p.slug}">View Details</a>
           </div>
         </div>
       </article>`;
@@ -386,7 +386,10 @@ function fillDetail(p){
   function initDetail(){
     const root = $('#planner-detail');
     if (!root) return;
-    const slug = root.dataset.slug;
+    // Get slug from URL parameter
+    const params = new URLSearchParams(location.search);
+    const slug = params.get('slug') || root.dataset.slug;
+    root.dataset.slug = slug;
     const p = bySlug(slug);
     if (p) fillDetail(p);
   }

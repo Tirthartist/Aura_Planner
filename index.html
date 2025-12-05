@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Planner · Home</title>
+  <link rel="shortcut icon" type="image/png" href="static/images/aura_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="page-home">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Aura Planner</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link btn btn-glow">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-content">
+        <h1>Find Your Perfect Event Planner</h1>
+        <p>Trusted professionals across your city and country. Elegant weddings, unforgettable birthdays, and seamless corporate events.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-art"><img src="static/images/hero-art.jpeg" alt=""></div>
+    </section>
+    <section class="container section reveal">
+      <h2 class="section-title">Browse by Category</h2>
+      <div class="category-grid">
+        <a href="planners.html?category=Birthday%20Party" class="category-card"><i class="fa-solid fa-cake-candles"></i><span>Birthday Party</span></a>
+        <a href="planners.html?category=New%20Year%20Party" class="category-card"><i class="fa-solid fa-champagne-glasses"></i><span>New Year Party</span></a>
+        <a href="planners.html?category=Ring%20Ceremony" class="category-card"><i class="fa-solid fa-ring"></i><span>Ring Ceremony</span></a>
+        <a href="planners.html?category=Marriage" class="category-card"><i class="fa-solid fa-heart"></i><span>Marriage</span></a>
+        <a href="planners.html?category=Anniversary" class="category-card"><i class="fa-solid fa-gem"></i><span>Anniversary</span></a>
+        <a href="planners.html?category=Baby%20Shower" class="category-card"><i class="fa-solid fa-baby"></i><span>Baby Shower</span></a>
+        <a href="planners.html?category=Corporate%20Events" class="category-card"><i class="fa-solid fa-briefcase"></i><span>Corporate Events</span></a>
+      </div>
+    </section>
+    <section class="container section reveal">
+      <h2 class="section-title">Featured Planners</h2>
+      <div id="featured-grid" class="planner-grid"></div>
+    </section>
+    <section class="container section alt reveal">
+      <div class="how-grid">
+        <div class="how-card glass">
+          <i class="fa-solid fa-filter"></i>
+          <h3>Filter</h3>
+          <p>Pick a category that matches your event type.</p>
+        </div>
+        <div class="how-card glass">
+          <i class="fa-solid fa-eye"></i>
+          <h3>Preview</h3>
+          <p>View galleries, services, and pricing at a glance.</p>
+        </div>
+        <div class="how-card glass">
+          <i class="fa-solid fa-handshake"></i>
+          <h3>Connect</h3>
+          <p>Reach out directly via WhatsApp, email, or form.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo small"><span class="logo-text">Aura Planner</span></div>
+        <p>Find your perfect event planner. Premium, trusted, and effortless.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/auraplanner07?igsh=c2c0aHRpdnR0ano=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" onclick="window.open('mailto:auraplanner07@gmail.com?body=Hi%2C%20I%20have%20an%20inquiry%20for%20event%20planning.', '_blank'); return false;" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>          
+          <a href="tel:+91 xxxxx xxxxx" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="link-list">
+          <li><a href="planners.html?category=Marriage">Weddings</a></li>
+          <li><a href="planners.html?category=Birthday%20Party">Birthdays</a></li>
+          <li><a href="planners.html?category=Corporate%20Events">Corporate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="link-list">
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=auraplanner07@gmail.com" target="_blank">auraplanner07@gmail.com</a></li>
+          <li><a href="tel:+91 xxxxx xxxxx">+91 xxxxx xxxxx</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Aura Planner. All rights reserved.</p>
+    </div>
+  </footer>
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <img class="lightbox-img" alt="Gallery image"/>
+    <button class="lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+  <!-- Enquiry Modal -->
+  <div id="enquiryModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Enquire Now</h2>
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="budget">Select Your Budget Range:</label>
+          <select id="budget" name="budget" required>
+            <option value="" disabled selected>Select Budget Range</option>
+            <option value="Under ₹50,000">Under ₹50,000</option>
+            <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+            <option value="₹1,00,000 - ₹5,00,000">₹1,00,000 - ₹5,00,000</option>
+            <option value="₹5,00,000 - ₹10,00,000">₹5,00,000 - ₹10,00,000</option>
+            <option value="Above ₹10,00,000">Above ₹10,00,000</option>
+            <option value="Custom Budget">Custom Budget (Specify in Message)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Details (Optional):</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us more about your event..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="static/js/main.js" defer></script>
+</body>
+</html>

@@ -481,7 +481,7 @@ function sendEmail(email, subject = 'Inquiry', body = '') {
       e.preventDefault();
       status && (status.textContent = 'Sending...');
       try{
-        const res = await fetch('https://formspree.io/f/xgvjwrgv', {
+        const res = await fetch('https://formspree.io/f/xwpgqgae', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
           body: new FormData(form)

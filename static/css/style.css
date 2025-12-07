@@ -125,7 +125,7 @@ img {
     align-items: stretch;
     padding: 10px 6px;
     max-width: 100%;
-    margin: 8px;
+    margin: 0;
   }
   .main-nav {
     flex-direction: column;
@@ -133,8 +133,9 @@ img {
     align-items: stretch;
   }
   .logo {
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 0;
+    text-align: left;
+    order: 1;
   }
 }
 
@@ -222,8 +223,16 @@ img {
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 10px;
-  box-shadow: var(--shadow);
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.nav-toggle:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--purple);
 }
 
 /* Footer */
@@ -1046,20 +1055,31 @@ select option {
   .how-grid {
     grid-template-columns: 1fr;
   }
+  .nav-wrap {
+    flex-wrap: wrap !important;
+    flex-direction: column;
+    align-items: stretch;
+  }
   .main-nav {
-    position: fixed;
-    inset: auto 16px 16px 16px;
-    background: rgba(20, 16, 38, 0.95);
+    position: static !important;
+    background: linear-gradient(180deg, rgba(20, 16, 38, 0.95), rgba(20, 16, 38, 0.9));
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 12px;
+    border-top: none;
+    padding: 12px !important;
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-    transform: translateY(10px);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.2s;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    width: 100%;
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 0;
   }
   .main-nav.show {
     transform: none;
@@ -1067,7 +1087,25 @@ select option {
     pointer-events: auto;
   }
   .nav-toggle {
-    display: inline-grid;
+    display: none !important;
+  }
+  .main-nav .nav-link {
+    padding: 12px 16px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s ease;
+    width: 100%;
+  }
+  .main-nav .nav-link:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--purple);
+  }
+  .main-nav .nav-link.btn {
+    background: linear-gradient(135deg, var(--purple), var(--gold));
+    border: none;
+    color: white;
   }
   .footer-grid {
     grid-template-columns: 1fr;
